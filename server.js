@@ -116,7 +116,9 @@ function addEmployee() {
                         var roleArray = [];
                         for (let i = 0; i < res.length; i++) {
                             roleArray.push(res[i].title);
+                            console.log(res[i]);
                         }
+                        console.log(roleArray);
                         return roleArray;
                     },
                     message: "What is this employee's role? "
@@ -129,6 +131,8 @@ function addEmployee() {
                         console.log(roleID)
                     }
                 }
+                console.log(answer);
+
                 connection.query(
                     "INSERT INTO employees SET ?",
                     {
